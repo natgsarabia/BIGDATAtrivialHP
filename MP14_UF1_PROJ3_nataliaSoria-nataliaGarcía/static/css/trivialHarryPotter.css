@@ -1,0 +1,126 @@
+@import url('https://fonts.cdnfonts.com/css/harry-p');
+
+html{
+    margin-top: 0%;
+    padding: 0%;
+    
+}
+
+
+.dropdown-toggle::after{
+    display: none
+}
+
+.dropdown-toggle img{
+    cursor: pointer;
+}
+
+header{
+    background-image: url("/static/assets/fondo2.gif")  ;   
+    background-size: cover;
+    opacity: 0.5;
+    margin-top: -30px;
+}
+
+.dropdown-menu{
+    background-color: #FcDEBE;
+    color:#272D2E;  
+    font-size: large;
+    font-weight: bolder;
+    font-size: 200%;
+}
+
+.navbar{
+    font-family: 'Harry P';
+}
+.carousel{
+    margin-bottom: 60px;
+}
+.carousel-item{
+    text-align: center;
+    margin-bottom: 50px;
+}
+body{ 
+    background-repeat: no-repeat;
+    background-image: url("https://www.xtrafondos.com/wallpapers/resoluciones/23/hogwarts-harry-potter_2560x1440_11461.jpg") ;
+    background-size: cover;
+    background-position: center ;
+    backdrop-filter:blur(10px);
+    margin-top:0;
+    padding: 0%;
+
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+
+
+.container{
+    margin-top: -5%;
+    height: 550px;
+    width: 800px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-image: url("/static/assets/fondoAccordionItem.jpg") ;
+    background-size:1250px;
+    background-position: center ;
+    border-radius: 5%;
+    display:inline-block;
+    justify-content:space-between;
+    opacity: 0.85;
+    margin-bottom: 10%;
+}
+
+.pregunta{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    color: #272D2E;
+    font-family: 'Harry P';
+    font-size: 35px;
+}
+
+
+.respuestas{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 150px;
+    color: #272D2E;
+    font-family: 'Qilla', sans-serif;
+    font-size: 20px;
+    
+}
+
+.respuestas .imagen,
+.respuestas .opciones{
+    flex:1;
+   
+}
+
+.respuestas .imagen{
+    margin-left: 10px;
+}
+.respuestas .opciones{
+    display:flex;
+    flex-direction: column;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #FcDEBE;
+    background-color: #272D2E;
+    font-family: "HARRY P";
+    text-align: center;
+    height: 50px;
+    font-size: 30px;
+}
+
+
+

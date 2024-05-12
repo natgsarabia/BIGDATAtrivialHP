@@ -1,0 +1,113 @@
+@import url('https://fonts.cdnfonts.com/css/harry-p');
+
+html{
+    margin-top: 0%;
+    padding: 0%;
+    
+}
+
+
+.dropdown-toggle::after{
+    display: none
+}
+
+.dropdown-toggle img{
+    cursor: pointer;
+}
+
+header{
+    background-image: url("/static/assets/fondo2.gif")  ;   
+    background-size: cover;
+    opacity: 0.5;
+    
+}
+
+.dropdown-menu{
+    background-color: #FcDEBE;
+    color:#272D2E;  
+    font-size: large;
+    font-weight: bolder;
+    font-size: 200%;
+}
+
+.navbar{
+    font-family: 'Harry P';
+}
+.carousel{
+    margin-bottom: 60px;
+}
+.carousel-item{
+    text-align: center;
+    margin-bottom: 50px;
+}
+body{ 
+    background-repeat: no-repeat;
+    background-image: url("https://www.xtrafondos.com/wallpapers/resoluciones/23/hogwarts-harry-potter_2560x1440_11461.jpg") ;
+    background-size: cover;
+    background-position: center ;
+    backdrop-filter:blur(10px);
+    margin-top:0;
+    padding: 0%;
+
+}
+
+main{
+    display:flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+.title{
+    color: #FcDEBE;
+    font-family: "HARRY P";
+    font-size: 70px;
+    
+}
+.gif{
+    margin-bottom: 5%;
+}
+.giftResultado{
+    height: 250px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-image: url("/static/assets/fondoAccordionItem.jpg") ;
+    background-size:260%;
+    background-position: center ;
+    border-radius: 70%;  
+    opacity: 0.85;
+    color: #272D2E;
+    font-family: 'Qilla', sans-serif;
+    font-size: 20px;
+    margin-bottom: 10%;
+}
+.result{
+    margin: 5%;
+    
+}
+
+.grafico{
+    width:300px;
+    height: 300px;
+    margin-right:7%;
+  
+    
+}
+
+footer{
+    color: #FcDEBE;
+    background-color:#272D2E;
+    font-family: "HARRY P";
+    position: bottom;
+    text-align:  center;
+    margin-top: 40px;
+    margin-bottom: -15px;
+    height: 50px;  
+    font-size: 30px;  
+}
+
+
+
+

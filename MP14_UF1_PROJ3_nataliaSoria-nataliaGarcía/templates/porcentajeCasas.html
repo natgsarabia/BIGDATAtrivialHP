@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/casas.css')}}">
+    <link href="https://fonts.cdnfonts.com/css/qilla" rel="stylesheet">
+</head>
+<body class="background-container">
+    <header>
+        <nav class="navbar navbar-expand-lg" >
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle subtitle"   data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="{{ url_for('static', filename='/assets/snitch.gif') }}" height="90px">  
+                            </a>
+                            <ul class="dropdown-menu ">
+                                <li>
+                                    <a class="dropdown-item articles" href="{{ url_for('trivialHP') }}">Trivial Harry Potter</a>
+                                    <a class="dropdown-item articles" href="{{ url_for('jugar_test') }}">Descubre a qué casa perteneces</a>
+                                    <a class="dropdown-item articles" href="{{ url_for('calcularEstudiantes') }}">Nuestros estudiantes</a>  
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <p ><img  src="{{ url_for('static', filename='/assets/logo.png') }}" height="150px" width="150px" alt="First slide"></p>
+              </div>             
+            </div>
+          </div>
+    </header>
+
+    <main class="container">
+
+        {% if porcentaje_griffindor > porcentaje_hufflepuff and porcentaje_griffindor > porcentaje_ravenclaw and porcentaje_griffindor > porcentaje_slytherin %}
+            <h1 style="color:rgb(187, 0, 0);">"GRYFFINDOR"</h1>
+            <img src="{{ url_for('static', filename='assets/griffindor.png') }}" height="250px" width="250px" >
+            <p style="color:rgb(187, 0, 0);">Felicidades has sido seleccionado para la Casa Gryffindor. Bienvenido al coraje, la valentía y la determinación.</p>
+
+        {% elif porcentaje_hufflepuff > porcentaje_griffindor and porcentaje_hufflepuff > porcentaje_ravenclaw and porcentaje_hufflepuff> porcentaje_slytherin %}
+            <h1 style="color: rgb(231, 216, 0)">"HUFFLEPUFF"</h1>
+            <img src="{{ url_for('static', filename='assets/hufflepuff.png') }}" height="250px" width="250px"  >
+            <p style="color: rgb(231, 216, 0)">Felicidades, ahora eres parte de la Casa Hufflepuff. Bienvenido a la lealtad, la paciencia y el trabajo duro.</p>
+
+        {% elif porcentaje_ravenclaw > porcentaje_hufflepuff and porcentaje_ravenclaw > porcentaje_griffindor and porcentaje_ravenclaw > porcentaje_slytherin %}
+            <h1 style="color: rgb(28, 69, 255)">"RAVENCLAW"</h1>
+            <img src="{{ url_for('static', filename='assets/ravenclaw.png') }}" height="250px" width="250px"  >
+            <p style="color: rgb(28, 69, 255)">Felicidades por haber llegado a la Casa Ravenclaw. Bienvenido a la inteligencia, la sabiduría y la creatividad.</p>
+
+        {% elif porcentaje_slytherin > porcentaje_hufflepuff and porcentaje_slytherin > porcentaje_ravenclaw and porcentaje_slytherin > porcentaje_griffindor %}
+            <h1 style="color: rgb(0, 124, 41)">"SLYTHERIN</h1>
+            <img src="{{ url_for('static', filename='assets/slytherin.png') }}" height="250px" width="250px">
+            <p style="color: rgb(0, 124, 41)">Felicidades por haber sido seleccionado para la Casa Slytherin. Bienvenido a la astucia, la ambición y la determinación.</p>
+
+        {% else %}
+            <p>Tus resultados han sido impresionantes. Perteneces a mas de una casa!</p>
+            <img src="{{ url_for('static', filename='assets/casas.png') }}" height="350px" width="350px">
+
+        {% endif %}
+        
+
+    </main>
+
+    <footer>
+        <p><b>Natalia's &copy;</b></p>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
